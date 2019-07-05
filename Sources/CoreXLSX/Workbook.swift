@@ -7,7 +7,7 @@
 
 public struct Workbook: Codable, Equatable {
   public struct Views: Codable, Equatable {
-    public let items: [View]
+    public let items: [View]?
 
     enum CodingKeys: String, CodingKey {
       case items = "workbookView"
@@ -21,7 +21,7 @@ public struct Workbook: Codable, Equatable {
     public let windowHeight: UInt
   }
 
-  public let views: Views
+  public let views: Views?
 
   public struct Sheets: Codable, Equatable {
     public let items: [Sheet]
